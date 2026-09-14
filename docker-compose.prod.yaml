@@ -1,0 +1,12 @@
+services:
+  portfolio:
+    image: ghcr.io/luscaer/lucas-ribeiro-portfolio:latest
+    expose:
+      - "80"
+    restart: unless-stopped
+    networks:
+      - proxy-network
+
+networks:
+  proxy-network:
+    external: true
